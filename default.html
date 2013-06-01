@@ -1,9 +1,65 @@
 <html>
 	<head>
 		<title>Star Wars: Edge of the Empire Dice Pool Calculator</title>
+		<link rel="stylesheet" href="css/main.css" />
 		<script type="text/javascript" src="js/main.js"></script>
 		</head>
 	<body>
-		Body Text
+		<div id="mainContainer">
+			<div class="diceContainer">
+				<img class="up" src="images/arrow_up.png" />
+				<img class="dice" src="images/dice/ability_silhouette.png" />
+				<img class="down" src="images/arrow_down.png" />
+			</div>
+			<div class="diceContainer">
+				<img class="up" src="images/arrow_up.png" />
+				<img class="dice" src="images/dice/proficiency_silhouette.png" />
+				<img class="down" src="images/arrow_down.png" />
+			</div>
+			<div class="diceContainer">
+				<img class="up" src="images/arrow_up.png" />
+				<img class="dice" src="images/dice/boost_silhouette.png" />
+				<img class="down" src="images/arrow_down.png" />
+			</div>
+			<div class="diceContainer">
+				<img class="up" src="images/arrow_up.png" />
+				<img class="dice" src="images/dice/difficulty_silhouette.png" />
+				<img class="down" src="images/arrow_down.png" />
+			</div>
+			<div class="diceContainer">
+				<img class="up" src="images/arrow_up.png" />
+				<img class="dice" src="images/dice/challenge_silhouette.png" />
+				<img class="down" src="images/arrow_down.png" />
+			</div>
+			<div class="diceContainer">
+				<img class="up" src="images/arrow_up.png" />
+				<img class="dice" src="images/dice/setback_silhouette.png" />
+				<img class="down" src="images/arrow_down.png" />
+			</div>
+			<div id="dicePoolContainer">
+				<div id="dicePool">&nbsp;</div>
+				<div id="rollButton">ROLL DICE</div>
+			</div>
+			<div id="resultsContainer">
+				<div class="resultsHeader">
+					<span id="successLabel">Success!</span>
+					<span id="failureLabel">Failure!</span>
+					<span id="successFailureMargin" class="marginRolled">0</span>
+				</div>
+				<div class="results">
+					<div><span id="numberOfSuccess" class="numberRolled">0</span>Success</div>
+					<div><span id="numberOfFailure" class="numberRolled">0</span>Failure</div>
+				</div>
+				<div class="resultsHeader">
+					<span id="advantageLabel">Advantage!</span>
+					<span id="threatLabel">Threat!</span>
+					<span id="advantageThreatMargin" class="marginRolled">0</span>
+				</div>
+				<div class="results">
+					<div><span id="numberOfAdvantage" class="numberRolled">0</span>Advantage</div>
+					<div><span id="numberOfThreat" class="numberRolled">0</span>Threat</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
