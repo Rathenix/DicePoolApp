@@ -7,8 +7,8 @@ body
 #mainContainer
 {
 	overflow:hidden;
-	height:960px;
-	width:640px;
+	height:600px;
+	width:350px;
 }
 
 .diceContainer
@@ -23,17 +23,22 @@ body
 
 .up
 {
-	padding-bottom:20px;
+	display:inline-block;
+	margin-bottom:20px;
+	background-image:url("../images/arrow_up.png");
+	background-repeat:no-repeat;
+	height:30px;
+	width:30px;
 }
 
 .down
 {
-	padding-top:20px;
-}
-
-.dice
-{
 	display:inline-block;
+	margin-top:20px;
+	background-image:url("../images/arrow_down.png");
+	background-repeat:no-repeat;
+	height:30px;
+	width:30px;
 }
 
 #dicePoolContainer
@@ -43,17 +48,25 @@ body
 
 #dicePool
 {
-	width:300px;
-	height:30px;
-	display:inline-block;
+	width:306px;
+	min-height:30px;
 	border:1px solid black;
+	margin-bottom:20px;
 }
 
 #rollButton
 {
-	width:100px;
-	height:30px;
 	display:inline-block;
+	width:150px;
+	height:50px;
+	border:1px solid black; /* remove this and make an image */
+}
+
+#resetButton
+{
+	display:inline-block;
+	width:150px;
+	height:50px;
 	border:1px solid black; /* remove this and make an image */
 }
 
@@ -61,6 +74,7 @@ body
 {
 	margin-top:10px;
 	margin-left:10px;
+	display:none;
 }
 
 .resultsHeader
@@ -87,4 +101,42 @@ body
 #failureLabel, #threatLabel
 {
 	color:Red;
+}
+
+.dice
+{
+	display:inline-block;
+	background-repeat:no-repeat;
+	height:30px;
+	width:30px;
+}
+
+.abilityDice
+{
+	background-image:url("../images/dice/ability_silhouette.png");
+}
+
+.proficiencyDice
+{
+	background-image:url("../images/dice/proficiency_silhouette.png");
+}
+
+.boostDice
+{
+	background-image:url("../images/dice/boost_silhouette.png");
+}
+
+.difficultyDice
+{
+	background-image:url("../images/dice/difficulty_silhouette.png");
+}
+
+.challengeDice
+{
+	background-image:url("../images/dice/challenge_silhouette.png");
+}
+
+.setbackDice
+{
+	background-image:url("../images/dice/setback_silhouette.png");
 }
