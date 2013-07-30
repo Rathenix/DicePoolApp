@@ -1,7 +1,7 @@
 function sideValues(x) {
 	this.success = x.success || 0;
 	this.advantage = x.advantage || 0;
-	this.thriumph = x.triumph || 0;
+	this.triumph = x.triumph || 0;
 	this.failure = x.failure || 0;
 	this.threat = x.threat || 0;
 	this.despair = x.despair || 0;
@@ -120,6 +120,10 @@ $(function () {
 	var numberOfAdvantage = $("#numberOfAdvantage");
 	var numberOfThreat = $("#numberOfThreat");
 	var advantageThreatMargin = $("#advantageThreatMargin");
+	var triumphLabel = $("#triumphLabel");
+	var triumphRolled = $("#triumphRolled");
+	var despairLabel = $("#despairLabel");
+	var despairRolled = $("#despairRolled");
 	
 	//This prevents the browser from highlighting a bunch of stuff if the user clicks too quickly 
 	$("body").mousedown(function() { 
@@ -144,12 +148,12 @@ $(function () {
 	});
 	
 	//On clicking the roll button
-	$(rollButton).click(function() {
+	rollButton.click(function() {
 		rollDiceAndCalculate();
 	});
 	
 	//On clicking the reset button
-	$(resetButton).click(function() {
+	resetButton.click(function() {
 		dicePool.find(".dice").remove();
 		resultsContainer.hide();
 	});
@@ -168,14 +172,16 @@ $(function () {
 			rando = Math.floor(Math.random()*dice.sides);
 			var value = dice.values[rando];
 			totals.success += value.success;
+			totals.success += value.triumph; //triumph are counted as success
 			totals.advantage += value.advantage;
 			totals.triumph += value.triumph;
 			totals.failure += value.failure;
+			totals.failure += value.despair; //despair are counted as failure
 			totals.threat += value.threat;
 			totals.despair += value.despair;
 		});
 		
-		//Show success/faliure and advantage/threat
+		//Show success/faliure labels
 		numberOfSuccess.text(totals.success);
 		numberOfFailure.text(totals.failure);
 		if (totals.success > totals.failure) {
@@ -188,6 +194,7 @@ $(function () {
 			successFailureMargin.text(totals.failure - totals.success);
 		}
 		
+		//Show advantage/threat labels
 		numberOfAdvantage.text(totals.advantage);
 		numberOfThreat.text(totals.threat);
 		if (totals.advantage > totals.threat) {
@@ -205,6 +212,21 @@ $(function () {
 			threatLabel.hide();	
 			advantageThreatMargin.hide();
 		}
+		
+		//Show triumph/despair labels
+		if (totals.triumph > 0) {
+			triumphRolled.text(totals.triumph);
+			triumphLabel.show();
+		} else {
+			triumphLabel.hide();
+		}
+		if (totals.despair > 0) {
+			despairRolled.text(totals.despair);
+			despairLabel.show();
+		} else {
+			despairLabel.hide();
+		}
+		
 		//Finally, show the results
 		resultsContainer.show();
 	}

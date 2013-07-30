@@ -1,28 +1,26 @@
-body
-{
+body {
 	font-size:16px;
 	font-family:Arial;
+	background-image:url("../images/witewall_3.png");
 }
 
-#mainContainer
-{
+#mainContainer {
 	overflow:hidden;
 	height:600px;
 	width:350px;
 }
 
-.diceContainer
-{
+.diceContainer {
 	width:30px;
 	height:130px;
 	margin:20px 10px 20px 10px;
 	display:inline-block;
 	border-left:1px solid #99D9EA;
 	border-right:1px solid #99D9EA;
+	background-color:white;
 }
 
-.up
-{
+.up {
 	display:inline-block;
 	margin-bottom:20px;
 	background-image:url("../images/arrow_up.png");
@@ -31,8 +29,7 @@ body
 	width:30px;
 }
 
-.down
-{
+.down {
 	display:inline-block;
 	margin-top:20px;
 	background-image:url("../images/arrow_down.png");
@@ -41,102 +38,182 @@ body
 	width:30px;
 }
 
-#dicePoolContainer
-{
+#dicePoolContainer {
 	margin-left:10px;
 }
 
-#dicePool
-{
+#dicePool {
 	width:306px;
 	min-height:30px;
 	border:1px solid black;
 	margin-bottom:20px;
+	background-color:white;
 }
 
-#rollButton
-{
-	display:inline-block;
-	width:150px;
-	height:50px;
-	border:1px solid black; /* remove this and make an image */
+#rollButton {
+	width:152px;
+	height:60px;
+	cursor:pointer;
+	font-size:26px;
+	line-height:26px;
+	border:1px solid #009900;
+	
+	/* fallback/image non-cover color */
+	background-color:#00CC00;
+    /* IE 7,8,9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00CC00', endColorstr='#009900');    
+    /* Safari 4+, Chrome 1-9 */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#00CC00), to(#009900));
+	/* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -webkit-linear-gradient(top, #00CC00, #009900); 
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient(top, #00CC00, #009900); 
+	/* IE 10+ */
+	background-image: -ms-linear-gradient(top, #00CC00, #009900); 
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient(top, #00CC00, #009900);
+	
+	outline:0;
+	-webkit-appearance:none;
+	-moz-box-shadow:2px 2px 3px #666;
+	-webkit-box-shadow:2px 2px 3px #666;
+	box-shadow:2px 2px 3px #666;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px;
+	border-radius:14px;
 }
 
-#resetButton
-{
-	display:inline-block;
-	width:150px;
-	height:50px;
-	border:1px solid black; /* remove this and make an image */
+#rollButton:active {
+	color:white;
+	border:1px solid #00CC00;
+	
+ 	/* fallback/image non-cover color */
+	background-color:#009900;
+    /* IE 7,8,9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009900', endColorstr='#00CC00');    
+    /* Safari 4+, Chrome 1-9 */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#009900), to(#00CC00));
+	/* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -webkit-linear-gradient(top, #009900, #00CC00); 
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient(top, #009900, #00CC00); 
+	/* IE 10+ */
+	background-image: -ms-linear-gradient(top, #009900, #00CC00); 
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient(top, #009900, #00CC00); 
 }
 
-#resultsContainer
-{
+#resetButton {
+	width:152px;
+	height:60px;
+	cursor:pointer;
+	font-size:26px;
+	line-height:26px;
+	border:1px solid #CC3300;
+
+	/* fallback/image non-cover color */
+	background-color:#FF4400;
+    /* IE 7,8,9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF4400', endColorstr='#CC3300');    
+    /* Safari 4+, Chrome 1-9 */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF4400), to(#CC3300));
+	/* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -webkit-linear-gradient(top, #FF4400, #CC3300); 
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient(top, #FF4400, #CC3300); 
+	/* IE 10+ */
+	background-image: -ms-linear-gradient(top, #FF4400, #CC3300); 
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient(top, #FF4400, #CC3300); 
+	
+	outline:0;
+	-webkit-appearance:none;
+	-moz-box-shadow:2px 2px 3px #666;
+	-webkit-box-shadow:2px 2px 3px #666;
+	box-shadow:2px 2px 3px #666;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px;
+	border-radius:14px;
+}
+
+#resetButton:active {
+	color:white;
+	
+	/* fallback/image non-cover color */
+	background-color:#CC3300;
+    /* IE 7,8,9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC3300', endColorstr='#FF4400');    
+    /* Safari 4+, Chrome 1-9 */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CC3300), to(#FF4400));
+	/* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -webkit-linear-gradient(top, #CC3300, #FF4400); 
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient(top, #CC3300, #FF4400); 
+	/* IE 10+ */
+	background-image: -ms-linear-gradient(top, #CC3300, #FF4400); 
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient(top, #CC3300, #FF4400);
+}
+
+#resultsContainer {
 	margin-top:10px;
 	margin-left:10px;
 	display:none;
 }
 
-.resultsHeader
-{
+.resultsHeader {
 	font-size:24px;
 	font-weight:bold;
 }
 
-.marginRolled
-{
+.marginRolled {
 	margin-left:15px;
 }
 
-.numberRolled
-{
+.numberRolled {
 	margin-right:5px;
 }
 
-#successLabel, #advantageLabel
-{
+#successLabel, #advantageLabel, #triumphLabel {
 	color:Green;
 }
 
-#failureLabel, #threatLabel
-{
+#failureLabel, #threatLabel, #despairLabel {
 	color:Red;
 }
 
-.dice
-{
+.triumphDespairLabel {
+	font-size:14px;
+	display:none;
+}
+
+.dice {
 	display:inline-block;
 	background-repeat:no-repeat;
 	height:30px;
 	width:30px;
 }
 
-.abilityDice
-{
+.abilityDice {
 	background-image:url("../images/dice/ability_silhouette.png");
 }
 
-.proficiencyDice
-{
+.proficiencyDice {
 	background-image:url("../images/dice/proficiency_silhouette.png");
 }
 
-.boostDice
-{
+.boostDice {
 	background-image:url("../images/dice/boost_silhouette.png");
 }
 
-.difficultyDice
-{
+.difficultyDice {
 	background-image:url("../images/dice/difficulty_silhouette.png");
 }
 
-.challengeDice
-{
+.challengeDice {
 	background-image:url("../images/dice/challenge_silhouette.png");
 }
 
-.setbackDice
-{
+.setbackDice {
 	background-image:url("../images/dice/setback_silhouette.png");
 }

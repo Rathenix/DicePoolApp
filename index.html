@@ -40,14 +40,16 @@
 			</div>
 			<div id="dicePoolContainer">
 				<div id="dicePool"></div>
-				<div id="rollButton">ROLL DICE</div>
-				<div id="resetButton">RESET POOL</div>
+				<input type="button" id="rollButton" value="Roll Dice" />
+				<input type="button" id="resetButton" value="Reset Pool" />
 			</div>
 			<div id="resultsContainer">
 				<div class="resultsHeader">
 					<span id="successLabel">Success!</span>
 					<span id="failureLabel">Failure!</span>
 					<span id="successFailureMargin" class="marginRolled">0</span>
+					<span id="triumphLabel" class="triumphDespairLabel">(<span id="triumphRolled"></span> Triumph)</span>
+					<span id="despairLabel" class="triumphDespairLabel">(<span id="despairRolled"></span> Despair)</span>
 				</div>
 				<div class="results">
 					<div><span id="numberOfSuccess" class="numberRolled">0</span>Success</div>
