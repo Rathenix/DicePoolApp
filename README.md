@@ -23,6 +23,8 @@ Below is a list of planned future changes. They are in no specific order and can
 - Fix button shadow bug (move margin from results container to button container)
 - Show die faces on results? (Maybe. Might be too cluttered)
 - Redesign dice selection (?)
+- Add force dice? (Not really sure how useful this is currently)
+- Add d100
 
 Bugs and Suggestions
 ------------------------
