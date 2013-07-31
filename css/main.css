@@ -6,14 +6,13 @@ body {
 
 #mainContainer {
 	overflow:hidden;
-	height:600px;
 	width:350px;
 }
 
 .diceContainer {
 	width:30px;
 	height:130px;
-	margin:20px 10px 20px 10px;
+	margin:20px 20px 20px 0;
 	display:inline-block;
 	border-left:1px solid #99D9EA;
 	border-right:1px solid #99D9EA;
@@ -39,7 +38,7 @@ body {
 }
 
 #dicePoolContainer {
-	margin-left:10px;
+	
 }
 
 #dicePool {
@@ -157,7 +156,6 @@ body {
 
 #resultsContainer {
 	margin-top:10px;
-	margin-left:10px;
 	display:none;
 }
 
