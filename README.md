@@ -16,8 +16,9 @@ The up and down arrows add and remove dice from your dice pool. Dice of the same
 Future Changes
 ------------------------
 Below is a list of planned future changes. They are in no specific order and can change frequently or without notice. This list is basically just for me to keep track of the things I want to do or any bugs that are pointed out to me that I want to fix.
-- Update up and down arrow images
+- Update up and down arrow images (css?)
 - Update top section to have larger buttons
+- Fix text placement on reset button on mobile
 - Fix overall size for iPhone 4
 - Keep track of number of dice of each type in dice selection section
 - Fix button shadow bug (move margin from results container to button container)
