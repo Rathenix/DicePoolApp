@@ -7,7 +7,7 @@ This Star Wars: Edge of the Empire campaign dice calculator was created by Brian
 
 Download
 ------------------------
-Because this app is designed to be browsed to on a mobile device, you don't really need to download it to use it. Just navigate to http://rathenix.github.io/DicePoolApp (case-sensitive) and use it from there. If you want to download it to make changes or host it elsewhere on your own, you are welcome to do so. It's just an html file, some css, and some js. Nothing to compile or setup; just drop the files in a directory somewhere and point a site at it. That's it.
+Because this app is designed to be browsed to on a mobile device, you don't really need to download it to use it. Just navigate to http://rathenix.github.io/DicePoolApp (case-sensitive) and use it from there. If you want to download it to make changes or host it elsewhere on your own, you are welcome to do so. It's just an html file, some css, and some js. Nothing to compile or setup; just drop the files in a directory somewhere and point a site at it or open the index.html file in your browser. That's it.
 
 Usage
 ------------------------
@@ -25,6 +25,7 @@ Below is a list of planned future changes. They are in no specific order and can
 - Redesign dice selection (?)
 - Add force dice? (Not really sure how useful this is currently)
 - Add d100
+- Roll history? (suggestion by /u/PonySaint)
 
 Bugs and Suggestions
 ------------------------
