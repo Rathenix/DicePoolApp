@@ -140,6 +140,7 @@ $(function () {
 			dicePool.append("<div class='dice " + diceToAdd + "' dice='" + diceToAdd + "'></div>");
 		}
 		e.preventDefault();
+		e.stopPropagation();
 	});
 	
 	//On clicking the down arrows
@@ -147,12 +148,14 @@ $(function () {
 		var diceToRemove = $(this).siblings(".dice").attr("dice");
 		dicePool.find("." + diceToRemove + ":last").remove();		
 		e.preventDefault();
+		e.stopPropagation();
 	});
 	
 	//On clicking the roll button
 	rollButton.on("click touchstart", function() {
 		rollDiceAndCalculate();
 		e.preventDefault();
+		e.stopPropagation();
 	});
 	
 	//On clicking the reset button
@@ -160,6 +163,7 @@ $(function () {
 		dicePool.find(".dice").remove();
 		resultsContainer.hide();
 		e.preventDefault();
+		e.stopPropagation();
 	});
 	
 	//"Rolls" dice, gets totals, and updates the screen
