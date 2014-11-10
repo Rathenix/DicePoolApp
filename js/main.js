@@ -131,7 +131,7 @@ $(function () {
 	});
 	
 	//On clicking the up arrows
-	$(".up").on("click touchstart", function() {
+	$(".up").fastClick(function() {
 		var diceToAdd = $(this).siblings(".dice").attr("dice");
 		var diceGroup = dicePool.children("." + diceToAdd + ":last");
 		if (diceGroup.length == 1) {
@@ -139,31 +139,23 @@ $(function () {
 		} else {
 			dicePool.append("<div class='dice " + diceToAdd + "' dice='" + diceToAdd + "'></div>");
 		}
-		e.preventDefault();
-		e.stopPropagation();
 	});
 	
 	//On clicking the down arrows
-	$(".down").on("click touchstart", function() {
+	$(".down").fastClick(function() {
 		var diceToRemove = $(this).siblings(".dice").attr("dice");
 		dicePool.find("." + diceToRemove + ":last").remove();		
-		e.preventDefault();
-		e.stopPropagation();
 	});
 	
 	//On clicking the roll button
-	rollButton.on("click touchstart", function() {
+	rollButton.fastClick(function() {
 		rollDiceAndCalculate();
-		e.preventDefault();
-		e.stopPropagation();
 	});
 	
 	//On clicking the reset button
-	resetButton.on("click touchstart", function() {
+	resetButton.fastClick(function() {
 		dicePool.find(".dice").remove();
 		resultsContainer.hide();
-		e.preventDefault();
-		e.stopPropagation();
 	});
 	
 	//"Rolls" dice, gets totals, and updates the screen
